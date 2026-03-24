@@ -323,7 +323,7 @@ const CATEGORIES = [
 ];
 
 // WhatsApp number
-const WHATSAPP_NUMBER = '919355446497';
+const WHATSAPP_NUMBER = '919818549572';
 
 function getWhatsAppLink(message) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
