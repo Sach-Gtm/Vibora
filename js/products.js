@@ -168,9 +168,9 @@ const PRODUCTS = [
     sizes: ['S','M','L','XL','XXL'],
     colors: ['White'],
     images: [
-      'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=800&fit=crop',
-      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=800&fit=crop',
-      'https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=800&h=800&fit=crop'
+      'https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1520113412536-ea36ce84534a?w=800&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1434389673658-2936b8561dcd?w=800&h=800&fit=crop'
     ],
     description: 'Professional white lab coat with chest and side pockets. Ideal for medical, dental, and laboratory use with custom name embroidery.',
     material: 'Poly-Cotton Twill, 200 GSM',
@@ -301,7 +301,7 @@ const PRODUCTS = [
     sizes: null,
     colors: ['Custom Branding'],
     images: [
-      'images/custom%20gift.jpg',
+      'images/CORPORATE-GIFTING.jpg',
       'https://www.adornscustomgifts.com/wp-content/uploads/2024/09/Personalized-Corporate-Diary-Combo-Adorns-6-455x455.jpg',
       'https://deq64r0ss2hgl.cloudfront.net/images/product/listing_grid/169045540790436.jpg'
     ],
