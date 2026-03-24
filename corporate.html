@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate & Bulk Orders — Vibora Custom Merch</title>
+  <meta name="description" content="Corporate bulk orders at Vibora. Custom branded t-shirts, mugs, bottles & gift boxes. Minimum 50 units. GST invoice available. Get a free quote!">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🐍</text></svg>">
+  <script>
+    function initTheme() {
+      const theme = localStorage.getItem("vibora_theme") || "dark";
+      if (theme === "light") document.documentElement.classList.add("light-mode");
+    }
+    initTheme();
+  </script>
+</head>
+<body>
+  <div class="announcement-bar">🏢 Premium Corporate Merch • Min 50 Units • Free Design & GST Invoices • Same-Day Quotes ⚡</div>
+  <header id="main-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2C8 2 4 6 4 10c0 3 2 5 4 6s4 3 4 7c0-4 2-6 4-7s4-3 4-6c0-4-4-8-6-8z" fill="#E91E63" opacity="0.9"/><path d="M14 5c-3 0-5 3-5 5 0 2 1.5 3.5 3 4.5S14 17 14 20c0-3 .5-4.5 2-5.5s3-2.5 3-4.5c0-2-2-5-5-5z" fill="#FFB300" opacity="0.7"/></svg>VIBOR<span class="logo-accent">A</span></a>
+      <nav class="nav-links"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="corporate.html" class="active">Corporate</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+      <div class="header-icons">
+        <button class="header-icon" id="search-btn" aria-label="Search">🔍</button>
+        <button class="header-icon" id="theme-toggle" aria-label="Toggle Theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" style="vertical-align: middle;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <a href="wishlist.html" class="header-icon" aria-label="Wishlist">♡<span class="icon-badge" id="wishlist-badge">0</span></a>
+        <a href="cart.html" class="header-icon" aria-label="Cart">🛒<span class="icon-badge" id="cart-badge">0</span></a>
+        <button id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div id="drawer-overlay"></div>
+  <nav id="mobile-drawer"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="corporate.html">Corporate</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="wishlist.html">♡ Wishlist</a><a href="cart.html">🛒 Cart</a></nav>
+  <div class="search-overlay" id="search-overlay"><button class="search-close" id="search-close">&times;</button><div class="search-inner"><input type="text" id="search-input" placeholder="Search products..." autocomplete="off"><div id="search-results"><p class="search-hint">Type to search products...</p></div></div></div>
+
+  <!-- Corporate Hero -->
+  <section class="corporate-hero" style="background: radial-gradient(ellipse at 80% 50%, rgba(233,30,99,0.08) 0%, transparent 60%); padding: 80px 0;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 300px; max-width: 600px;">
+        <h1 class="fade-up" style="font-size: clamp(2rem, 5vw, 3.5rem);">🏢 CORPORATE & BULK ORDERS</h1>
+        <p class="fade-up" style="margin-top:16px;font-size:1.1rem; color: var(--text-secondary);">Minimum 50 units · Custom branding · GST invoice available</p>
+        <div class="trust-badges mt-4 fade-up" style="justify-content: flex-start; padding-top: 16px;">
+          <div class="trust-badge"><span>📦</span> Min 50 Units</div>
+          <div class="trust-badge"><span>🎨</span> Branding</div>
+          <div class="trust-badge"><span>📄</span> GST Invoice</div>
+        </div>
+      </div>
+      <div class="fade-up" style="flex: 1; display: flex; justify-content: center; min-width: 300px;">
+        <img src="https://images.unsplash.com/photo-1512413914441-2ce08f51070e?w=800&h=600&fit=crop" style="border-radius: var(--radius-md); box-shadow: var(--shadow-md); max-height: 350px; object-fit: cover;" alt="Gift Box with T-Shirt, Bottle, Cup, Diary, Pen, Keychain, Chocolates">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-up">WHAT WE OFFER</h2>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-icon">👕</div>
+          <h3>CUSTOM T-SHIRTS</h3>
+          <p>Branded tees for events, teams, and corporate wear with your logo and design</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">☕</div>
+          <h3>BRANDED MUGS</h3>
+          <p>Custom ceramic mugs with company logo — perfect for clients and employees</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">🧴</div>
+          <h3>CUSTOM BOTTLES</h3>
+          <p>Stainless steel sipper bottles with UV print or laser engraving</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">🎁</div>
+          <h3>GIFT BOXES</h3>
+          <p>Curated corporate gift boxes with tee + mug + bottle + keychain + mousepad</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">🏆</div>
+          <h3>EVENT MERCHANDISE</h3>
+          <p>Custom merch for conferences, hackathons, college fests and more</p>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">🥼</div>
+          <h3>UNIFORMS & LAB COATS</h3>
+          <p>Embroidered uniforms, lab coats and workwear with your organization's branding</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section" style="background:var(--bg-secondary);">
+    <div class="container">
+      <h2 class="section-title fade-up">HOW IT WORKS</h2>
+      <p class="section-subtitle fade-up">From design to delivery in 3 simple steps</p>
+      <div class="steps-grid" style="grid-template-columns:repeat(3,1fr);">
+        <div class="step-card fade-up">
+          <div class="step-number">1</div>
+          <h3>SHARE YOUR DESIGN</h3>
+          <p>Send us your logo, design, or idea via WhatsApp. We'll help refine it for free.</p>
+        </div>
+        <div class="step-card fade-up">
+          <div class="step-number">2</div>
+          <h3>GET A QUOTE IN 2 HRS</h3>
+          <p>We'll send you a detailed quote with pricing, timelines, and mockups.</p>
+        </div>
+        <div class="step-card fade-up">
+          <div class="step-number">3</div>
+          <h3>WE DELIVER PAN-INDIA</h3>
+          <p>Once confirmed, we produce and ship directly to your office or venue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-up">GET A FREE QUOTE</h2>
+      <p class="section-subtitle fade-up">Fill out the form and we'll get back to you within 2 hours</p>
+      <div class="quote-form fade-up">
+        <div class="form-group">
+          <label>Your Name *</label>
+          <input type="text" id="q-name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label>Company Name *</label>
+          <input type="text" id="q-company" placeholder="Acme Corp">
+        </div>
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" id="q-email" placeholder="john@acme.com">
+        </div>
+        <div class="form-group">
+          <label>Phone *</label>
+          <input type="tel" id="q-phone" placeholder="+91 98765 43210">
+        </div>
+        <div class="form-group">
+          <label>Product Type *</label>
+          <select id="q-product">
+            <option value="">Select product</option>
+            <option>Custom T-Shirts</option>
+            <option>Polo T-Shirts</option>
+            <option>Sports Jerseys</option>
+            <option>Lab Coats</option>
+            <option>Custom Mugs</option>
+            <option>Custom Bottles</option>
+            <option>Mouse Pads</option>
+            <option>Key Chains</option>
+            <option>Corporate Gift Boxes</option>
+            <option>Mixed / Multiple Products</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Quantity (approx.) *</label>
+          <input type="number" id="q-qty" placeholder="50" min="50">
+        </div>
+        <div class="form-group">
+          <label>Additional Notes</label>
+          <textarea id="q-notes" rows="3" placeholder="Any specific requirements, design details, deadline..." style="resize:vertical;"></textarea>
+        </div>
+        <button class="btn btn-whatsapp btn-lg" style="width:100%;" onclick="submitQuote()">💬 Send Quote Request on WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted By -->
+  <section class="section" style="background:var(--bg-secondary);">
+    <div class="container">
+      <h2 class="section-title fade-up">TRUSTED BY</h2>
+      <div class="trusted-logos fade-up">
+        <div class="trusted-logo">TechCorp</div>
+        <div class="trusted-logo">StartupXYZ</div>
+        <div class="trusted-logo">MediHealth</div>
+        <div class="trusted-logo">EduPro</div>
+        <div class="trusted-logo">FashionCo</div>
+        <div class="trusted-logo">EventsPlus</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-up">FREQUENTLY ASKED QUESTIONS</h2>
+      <div class="faq-accordion fade-up">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">What is the minimum order quantity (MOQ)? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Our minimum order quantity for corporate/bulk orders is 50 units per product. For custom gift boxes, the MOQ is 25 sets.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">What is the turnaround time? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Typically 7–10 business days from design approval. Rush orders (3–5 days) are available at a small premium. We'll confirm the exact timeline in our quote.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">What payment methods do you accept? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We accept bank transfer (NEFT/RTGS), UPI, and cash on delivery for select orders. For corporate orders, we provide a proforma invoice with GST details.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">Do you provide GST invoices? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes! We provide proper GST invoices for all corporate orders. Our GSTIN is available on request.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">Can I order a sample before bulk? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Absolutely! We offer sample orders at a nominal charge (adjusted against your bulk order). Contact us on WhatsApp to arrange a sample.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">Do you help with design? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes, we provide FREE design support for all bulk orders. Just share your logo, ideas, or references and our team will create print-ready mockups.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo">VIBOR<span class="logo-accent">A</span></div><p>Your Ideas of style Deserve to Exist. Premium custom merch at unbeatable prices.</p></div>
+        <div class="footer-col"><h4>SHOP</h4><a href="shop.html">All Products</a><a href="shop.html?cat=tshirts">T-Shirts</a><a href="shop.html?cat=accessories">Accessories</a></div>
+        <div class="footer-col"><h4>COMPANY</h4><a href="about.html">About Us</a><a href="corporate.html">Corporate</a><a href="contact.html">Contact</a></div>
+        <div class="footer-col"><h4>CONNECT</h4><a href="https://wa.me/919355446497" target="_blank">WhatsApp</a><a href="https://instagram.com/viboraonline.in" target="_blank">Instagram</a></div>
+      </div>
+      <div class="footer-bottom"><span>Made with ❤️ in India · © 2026 Vibora.</span><span>Your Ideas of style Deserve to Exist.</span></div>
+    </div>
+  </footer>
+  <div class="whatsapp-float"><a href="https://wa.me/919355446497?text=Hi%20Vibora!%20I%20need%20a%20corporate%20bulk%20order%20quote." target="_blank"><span class="wa-icon">💬</span><span class="wa-text">Chat with us!</span></a></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    function toggleFAQ(btn) {
+      const item = btn.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    }
+
+    function submitQuote() {
+      const name = document.getElementById('q-name').value.trim();
+      const company = document.getElementById('q-company').value.trim();
+      const email = document.getElementById('q-email').value.trim();
+      const phone = document.getElementById('q-phone').value.trim();
+      const product = document.getElementById('q-product').value;
+      const qty = document.getElementById('q-qty').value;
+      const notes = document.getElementById('q-notes').value.trim();
+
+      if (!name || !company || !email || !phone || !product || !qty) {
+        Toast.show('Please fill all required fields');
+        return;
+      }
+
+      let msg = `Hi Vibora! I need a corporate bulk order quote.\n\n`;
+      msg += `Name: ${name}\n`;
+      msg += `Company: ${company}\n`;
+      msg += `Email: ${email}\n`;
+      msg += `Phone: ${phone}\n`;
+      msg += `Product: ${product}\n`;
+      msg += `Quantity: ${qty} units\n`;
+      if (notes) msg += `Notes: ${notes}\n`;
+      msg += `\nPlease share pricing and timeline. Thank you!`;
+
+      window.open(getWhatsAppLink(msg), '_blank');
+    }
+  </script>
+</body>
+</html>

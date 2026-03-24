@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — Vibora Custom Merch</title>
+  <meta name="description" content="View product details, select size & color, and order via WhatsApp at Vibora.">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🐍</text></svg>">
+  <script>
+    function initTheme() {
+      const theme = localStorage.getItem("vibora_theme") || "dark";
+      if (theme === "light") document.documentElement.classList.add("light-mode");
+    }
+    initTheme();
+  </script>
+</head>
+<body>
+
+  <div class="announcement-bar">🔥 Premium Custom Merch, 10% Cheaper Guaranteed • Free Design Support • PAN-India Shipping 🚀</div>
+
+  <header id="main-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2C8 2 4 6 4 10c0 3 2 5 4 6s4 3 4 7c0-4 2-6 4-7s4-3 4-6c0-4-4-8-6-8z" fill="#E91E63" opacity="0.9"/><path d="M14 5c-3 0-5 3-5 5 0 2 1.5 3.5 3 4.5S14 17 14 20c0-3 .5-4.5 2-5.5s3-2.5 3-4.5c0-2-2-5-5-5z" fill="#FFB300" opacity="0.7"/></svg>VIBOR<span class="logo-accent">A</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a><a href="shop.html" class="active">Shop</a><a href="corporate.html">Corporate</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-icons">
+        <button class="header-icon" id="search-btn" aria-label="Search">🔍</button>
+        <button class="header-icon" id="theme-toggle" aria-label="Toggle Theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" style="vertical-align: middle;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <a href="wishlist.html" class="header-icon" aria-label="Wishlist">♡<span class="icon-badge" id="wishlist-badge">0</span></a>
+        <a href="cart.html" class="header-icon" aria-label="Cart">🛒<span class="icon-badge" id="cart-badge">0</span></a>
+        <button id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div id="drawer-overlay"></div>
+  <nav id="mobile-drawer">
+    <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="corporate.html">Corporate</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="wishlist.html">♡ Wishlist</a><a href="cart.html">🛒 Cart</a>
+  </nav>
+  <div class="search-overlay" id="search-overlay">
+    <button class="search-close" id="search-close">&times;</button>
+    <div class="search-inner">
+      <input type="text" id="search-input" placeholder="Search products..." autocomplete="off">
+      <div id="search-results"><p class="search-hint">Type to search products...</p></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="breadcrumb" id="breadcrumb">
+      <a href="index.html">Home</a><span>›</span><a href="shop.html">Shop</a><span>›</span><span id="bc-product">Product</span>
+    </div>
+
+    <section class="section" style="padding-top:24px;">
+      <div class="product-detail" id="product-detail">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="section">
+      <h2 class="section-title">YOU MAY ALSO LIKE</h2>
+      <div class="product-grid" id="related-products"></div>
+    </section>
+
+    <!-- Recently Viewed -->
+    <section class="section" id="recently-viewed-section" style="display:none;">
+      <h2 class="section-title">RECENTLY VIEWED</h2>
+      <div class="product-grid" id="recently-viewed"></div>
+    </section>
+  </div>
+
+  <!-- Size Guide Modal -->
+  <div class="modal-overlay" id="size-guide-modal" onclick="if(event.target===this)closeSizeGuide()">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeSizeGuide()">&times;</button>
+      <h2 style="font-family:var(--font-heading);font-size:1.5rem;letter-spacing:2px;margin-bottom:16px;">SIZE GUIDE</h2>
+      <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:16px;">Measurements in inches. For best fit, measure yourself and compare.</p>
+      <table class="size-table">
+        <thead>
+          <tr><th>Size</th><th>Chest</th><th>Length</th><th>Shoulder</th><th>Sleeve</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>XS</td><td>34</td><td>25</td><td>15</td><td>7.5</td></tr>
+          <tr><td>S</td><td>36</td><td>26</td><td>16</td><td>8</td></tr>
+          <tr><td>M</td><td>38</td><td>27</td><td>17</td><td>8</td></tr>
+          <tr><td>L</td><td>40</td><td>28</td><td>18</td><td>8.5</td></tr>
+          <tr><td>XL</td><td>42</td><td>29</td><td>19</td><td>9</td></tr>
+          <tr><td>XXL</td><td>44</td><td>30</td><td>20</td><td>9</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo">VIBOR<span class="logo-accent">A</span></div><p>Your Ideas of style Deserve to Exist. Premium custom merch at unbeatable prices.</p></div>
+        <div class="footer-col"><h4>SHOP</h4><a href="shop.html">All Products</a><a href="shop.html?cat=tshirts">T-Shirts</a><a href="shop.html?cat=sports">Sports Tees</a><a href="shop.html?cat=accessories">Accessories</a></div>
+        <div class="footer-col"><h4>COMPANY</h4><a href="about.html">About Us</a><a href="corporate.html">Corporate</a><a href="contact.html">Contact</a></div>
+        <div class="footer-col"><h4>CONNECT</h4><a href="https://wa.me/919355446497" target="_blank">WhatsApp</a><a href="https://instagram.com/viboraonline.in" target="_blank">Instagram</a><a href="mailto:hello@vibora.in">Email</a></div>
+      </div>
+      <div class="footer-bottom"><span>Made with ❤️ in India · © 2026 Vibora.</span><span>Your Ideas of style Deserve to Exist.</span></div>
+    </div>
+  </footer>
+
+  <div class="whatsapp-float">
+    <a href="https://wa.me/919355446497?text=Hi%20Vibora!%20I%20have%20a%20question" target="_blank"><span class="wa-icon">💬</span><span class="wa-text">Chat with us!</span></a>
+  </div>
+
+  <script src="js/products.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    let selectedSize = '';
+    let selectedColor = '';
+    let qty = 1;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const pid = params.get('id');
+      const product = getProductById(pid);
+
+      if (!product) {
+        document.getElementById('product-detail').innerHTML = '<p style="text-align:center;padding:80px;color:var(--text-muted);grid-column:1/-1;">Product not found. <a href="shop.html" style="color:var(--accent);">Back to Shop</a></p>';
+        return;
+      }
+
+      // Track recently viewed
+      Store.addRecentlyViewed(product.id);
+
+      // Update page title & breadcrumb
+      document.title = `${product.name} — Vibora Custom Merch`;
+      document.getElementById('bc-product').textContent = product.name;
+
+      // Default selections
+      selectedSize = product.sizes ? product.sizes[Math.floor(product.sizes.length / 2)] : '';
+      selectedColor = product.colors ? product.colors[0] : '';
+
+      renderProductDetail(product);
+      renderRelated(product);
+      renderRecentlyViewed(product.id);
+    });
+
+    function renderProductDetail(p) {
+      const isWished = Store.isInWishlist(p.id);
+      const detail = document.getElementById('product-detail');
+      detail.innerHTML = `
+        <div class="product-gallery fade-up">
+          <img src="${p.images[0]}" alt="${p.name}" class="main-image" id="main-img">
+          <div class="thumb-row">
+            ${p.images.map((img, i) => `<img src="${img}" alt="${p.name} view ${i+1}" class="thumb ${i===0?'active':''}" onclick="changeImage('${img}', this)">`).join('')}
+          </div>
+        </div>
+        <div class="detail-info fade-up">
+          ${p.badge ? `<span class="product-badge badge-${p.badge.toLowerCase().replace(/\s/g,'')}" style="position:static;display:inline-block;margin-bottom:12px;">${p.badge}</span>` : ''}
+          <h1>${p.name}</h1>
+          <div class="detail-pricing">
+            <span class="price-big">${formatPrice(p.price)}</span>
+            <span class="price-cut">${formatPrice(p.competitorPrice)}</span>
+            <span class="discount-badge" style="font-size:0.85rem;padding:4px 12px;">${p.discount}% OFF</span>
+          </div>
+          <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:20px;">Competitor avg: ${formatPrice(p.competitorPrice)} | <strong style="color:var(--success);">Our Price: ${formatPrice(p.price)}</strong></p>
+
+          ${p.sizes ? `
+          <div class="detail-section">
+            <label>Size <a href="#" onclick="openSizeGuide();return false;" style="color:var(--accent);font-size:0.75rem;font-weight:400;text-transform:none;margin-left:8px;">📏 Size Guide</a></label>
+            <div class="size-options">
+              ${p.sizes.map(s => `<button class="size-opt ${s === selectedSize ? 'selected' : ''}" onclick="selectSize('${s}', this)">${s}</button>`).join('')}
+            </div>
+          </div>` : ''}
+
+          ${p.colors ? `
+          <div class="detail-section">
+            <label>Color</label>
+            <div class="color-options">
+              ${p.colors.map(c => `<button class="color-opt ${c === selectedColor ? 'selected' : ''}" onclick="selectColor('${c}', this)">${c}</button>`).join('')}
+            </div>
+          </div>` : ''}
+
+          <div class="detail-section">
+            <label>Custom Text / Name (Optional)</label>
+            <input type="text" class="custom-text-input" id="custom-text" placeholder="Enter your custom text here...">
+          </div>
+
+          <div class="detail-section">
+            <label>Quantity</label>
+            <div class="qty-control">
+              <button class="qty-btn" onclick="changeQty(-1)">−</button>
+              <div class="qty-val" id="qty-display">1</div>
+              <button class="qty-btn" onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+
+          <div class="detail-actions">
+            <button class="btn btn-primary" onclick="addDetailToCart('${p.id}')">🛒 Add to Cart</button>
+            <button class="btn btn-whatsapp" onclick="buyOnWhatsApp('${p.id}')">💬 Buy on WhatsApp</button>
+          </div>
+          <div class="detail-actions" style="margin-top:12px;">
+            <button class="btn btn-outline-accent btn-sm" onclick="toggleWish('${p.id}', null); renderProductDetail(getProductById('${p.id}'));" style="flex:none;">
+              ${isWished ? '❤️ In Wishlist' : '🤍 Add to Wishlist'}
+            </button>
+            <a href="${getWhatsAppLink('Hi Vibora! I need a bulk quote for ' + p.name)}" target="_blank" class="btn btn-gold btn-sm" style="flex:none;">📦 Ask Bulk Quote</a>
+          </div>
+
+          <div class="detail-meta">
+            <h3>PRODUCT DETAILS</h3>
+            <p>${p.description}</p>
+            <ul class="mt-2">
+              <li><strong>Material:</strong> ${p.material}</li>
+              <li><strong>Print Type:</strong> ${p.printType}</li>
+              <li><strong>Wash Care:</strong> ${p.washCare}</li>
+            </ul>
+          </div>
+        </div>
+      `;
+      initScrollAnimations();
+    }
+
+    function changeImage(src, thumb) {
+      document.getElementById('main-img').src = src;
+      document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+    }
+
+    function selectSize(size, btn) {
+      selectedSize = size;
+      document.querySelectorAll('.size-opt').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+    }
+
+    function selectColor(color, btn) {
+      selectedColor = color;
+      document.querySelectorAll('.color-opt').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+    }
+
+    function changeQty(delta) {
+      qty = Math.max(1, qty + delta);
+      document.getElementById('qty-display').textContent = qty;
+    }
+
+    function addDetailToCart(productId) {
+      const customText = document.getElementById('custom-text')?.value.trim() || '';
+      Store.addToCart(productId, selectedSize, selectedColor, qty, customText);
+    }
+
+    function buyOnWhatsApp(productId) {
+      const p = getProductById(productId);
+      const customText = document.getElementById('custom-text')?.value.trim() || '';
+      let msg = `Hi Vibora! I want to order ${p.name} — ${formatPrice(p.price)}`;
+      if (selectedSize) msg += ` | Size: ${selectedSize}`;
+      if (selectedColor) msg += ` | Color: ${selectedColor}`;
+      msg += ` | Qty: ${qty}`;
+      if (customText) msg += ` | Custom: "${customText}"`;
+      window.open(getWhatsAppLink(msg), '_blank');
+    }
+
+    function renderRelated(product) {
+      const related = PRODUCTS.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
+      const grid = document.getElementById('related-products');
+      if (related.length > 0) {
+        grid.innerHTML = related.map(p => renderProductCard(p)).join('');
+        initLazyLoad();
+        initScrollAnimations();
+      }
+    }
+
+    function renderRecentlyViewed(currentId) {
+      const recent = Store.getRecentlyViewed().filter(id => id !== currentId);
+      if (recent.length === 0) return;
+      document.getElementById('recently-viewed-section').style.display = 'block';
+      const grid = document.getElementById('recently-viewed');
+      grid.innerHTML = recent.slice(0, 4).map(id => {
+        const p = getProductById(id);
+        return p ? renderProductCard(p) : '';
+      }).join('');
+      initLazyLoad();
+      initScrollAnimations();
+    }
+  </script>
+</body>
+</html>

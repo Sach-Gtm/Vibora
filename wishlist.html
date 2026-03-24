@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Wishlist — Vibora Custom Merch</title>
+  <meta name="description" content="Your saved products at Vibora. Move to cart or buy via WhatsApp.">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🐍</text></svg>">
+  <script>
+    function initTheme() {
+      const theme = localStorage.getItem("vibora_theme") || "dark";
+      if (theme === "light") document.documentElement.classList.add("light-mode");
+    }
+    initTheme();
+  </script>
+</head>
+<body>
+  <div class="announcement-bar">🔥 Premium Custom Merch, 10% Cheaper Guaranteed • Free Design Support • PAN-India Shipping 🚀</div>
+  <header id="main-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2C8 2 4 6 4 10c0 3 2 5 4 6s4 3 4 7c0-4 2-6 4-7s4-3 4-6c0-4-4-8-6-8z" fill="#E91E63" opacity="0.9"/><path d="M14 5c-3 0-5 3-5 5 0 2 1.5 3.5 3 4.5S14 17 14 20c0-3 .5-4.5 2-5.5s3-2.5 3-4.5c0-2-2-5-5-5z" fill="#FFB300" opacity="0.7"/></svg>VIBOR<span class="logo-accent">A</span></a>
+      <nav class="nav-links"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="corporate.html">Corporate</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+      <div class="header-icons">
+        <button class="header-icon" id="search-btn" aria-label="Search">🔍</button>
+        <button class="header-icon" id="theme-toggle" aria-label="Toggle Theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" style="vertical-align: middle;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <a href="wishlist.html" class="header-icon active" aria-label="Wishlist">♡<span class="icon-badge" id="wishlist-badge">0</span></a>
+        <a href="cart.html" class="header-icon" aria-label="Cart">🛒<span class="icon-badge" id="cart-badge">0</span></a>
+        <button id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div id="drawer-overlay"></div>
+  <nav id="mobile-drawer"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="corporate.html">Corporate</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="wishlist.html">♡ Wishlist</a><a href="cart.html">🛒 Cart</a></nav>
+  <div class="search-overlay" id="search-overlay"><button class="search-close" id="search-close">&times;</button><div class="search-inner"><input type="text" id="search-input" placeholder="Search products..." autocomplete="off"><div id="search-results"><p class="search-hint">Type to search products...</p></div></div></div>
+
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Wishlist</span></div>
+    <div class="page-header"><h1>YOUR WISHLIST</h1></div>
+    <div id="wishlist-content"></div>
+    <div style="padding:40px 0;"></div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo">VIBOR<span class="logo-accent">A</span></div><p>Your Ideas of style Deserve to Exist. Premium custom merch at unbeatable prices.</p></div>
+        <div class="footer-col"><h4>SHOP</h4><a href="shop.html">All Products</a><a href="shop.html?cat=tshirts">T-Shirts</a><a href="shop.html?cat=accessories">Accessories</a></div>
+        <div class="footer-col"><h4>COMPANY</h4><a href="about.html">About Us</a><a href="corporate.html">Corporate</a><a href="contact.html">Contact</a></div>
+        <div class="footer-col"><h4>CONNECT</h4><a href="https://wa.me/919355446497" target="_blank">WhatsApp</a><a href="https://instagram.com/viboraonline.in" target="_blank">Instagram</a></div>
+      </div>
+      <div class="footer-bottom"><span>Made with ❤️ in India · © 2026 Vibora.</span><span>Your Ideas of style Deserve to Exist.</span></div>
+    </div>
+  </footer>
+  <div class="whatsapp-float"><a href="https://wa.me/919355446497?text=Hi%20Vibora!%20I%20have%20a%20question" target="_blank"><span class="wa-icon">💬</span><span class="wa-text">Chat with us!</span></a></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', renderWishlist);
+
+    function renderWishlist() {
+      const wl = Store.getWishlist();
+      const container = document.getElementById('wishlist-content');
+
+      if (wl.length === 0) {
+        container.innerHTML = `
+          <div class="wishlist-empty fade-up">
+            <p style="font-size:3rem;margin-bottom:16px;">♡</p>
+            <p>Your wishlist is empty</p>
+            <a href="shop.html" class="btn btn-primary">Explore Products</a>
+          </div>`;
+        initScrollAnimations();
+        return;
+      }
+
+      const products = wl.map(id => getProductById(id)).filter(Boolean);
+      container.innerHTML = `
+        <div class="product-grid">
+          ${products.map(p => `
+            <div class="product-card fade-up" data-product-id="${p.id}">
+              ${p.badge ? `<span class="product-badge badge-${p.badge.toLowerCase().replace(/\s/g,'')}">${p.badge}</span>` : ''}
+              <div class="product-image-wrap">
+                <a href="product.html?id=${p.id}"><img src="${p.images[0]}" alt="${p.name}" class="product-img" loading="lazy"></a>
+                <button class="wishlist-btn active" onclick="removeWishItem('${p.id}')" aria-label="Remove from wishlist">❤️</button>
+              </div>
+              <div class="product-info">
+                <a href="product.html?id=${p.id}" class="product-name">${p.name}</a>
+                <div class="product-pricing">
+                  <span class="price-current">${formatPrice(p.price)}</span>
+                  <span class="price-original">${formatPrice(p.competitorPrice)}</span>
+                  <span class="discount-badge">${p.discount}% OFF</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn btn-primary btn-sm" onclick="moveToCart('${p.id}')">Move to Cart</button>
+                  <a href="${getWhatsAppLink('Hi Vibora! I want to order ' + p.name + ' — ' + formatPrice(p.price))}" target="_blank" class="btn btn-whatsapp btn-sm">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>`;
+      initScrollAnimations();
+    }
+
+    function removeWishItem(productId) {
+      Store.toggleWishlist(productId);
+      renderWishlist();
+    }
+
+    function moveToCart(productId) {
+      const p = getProductById(productId);
+      const size = p.sizes ? p.sizes[Math.floor(p.sizes.length / 2)] : null;
+      const color = p.colors ? p.colors[0] : null;
+      Store.addToCart(productId, size, color, 1);
+      Store.toggleWishlist(productId);
+      renderWishlist();
+      Toast.show('Moved to cart! 🛒');
+    }
+  </script>
+</body>
+</html>

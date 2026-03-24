@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Vibora Custom Merch</title>
+  <meta name="description" content="Get in touch with Vibora via WhatsApp, Instagram, or email. We respond within minutes!">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🐍</text></svg>">
+  <script>
+    function initTheme() {
+      const theme = localStorage.getItem("vibora_theme") || "dark";
+      if (theme === "light") document.documentElement.classList.add("light-mode");
+    }
+    initTheme();
+  </script>
+</head>
+<body>
+  <div class="announcement-bar">🔥 Premium Custom Merch, 10% Cheaper Guaranteed • Free Design Support • PAN-India Shipping 🚀</div>
+  <header id="main-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2C8 2 4 6 4 10c0 3 2 5 4 6s4 3 4 7c0-4 2-6 4-7s4-3 4-6c0-4-4-8-6-8z" fill="#E91E63" opacity="0.9"/><path d="M14 5c-3 0-5 3-5 5 0 2 1.5 3.5 3 4.5S14 17 14 20c0-3 .5-4.5 2-5.5s3-2.5 3-4.5c0-2-2-5-5-5z" fill="#FFB300" opacity="0.7"/></svg>VIBOR<span class="logo-accent">A</span></a>
+      <nav class="nav-links"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="corporate.html">Corporate</a><a href="about.html">About</a><a href="contact.html" class="active">Contact</a></nav>
+      <div class="header-icons">
+        <button class="header-icon" id="search-btn" aria-label="Search">🔍</button>
+        <button class="header-icon" id="theme-toggle" aria-label="Toggle Theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" style="vertical-align: middle;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <a href="wishlist.html" class="header-icon" aria-label="Wishlist">♡<span class="icon-badge" id="wishlist-badge">0</span></a>
+        <a href="cart.html" class="header-icon" aria-label="Cart">🛒<span class="icon-badge" id="cart-badge">0</span></a>
+        <button id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div id="drawer-overlay"></div>
+  <nav id="mobile-drawer"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="corporate.html">Corporate</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="wishlist.html">♡ Wishlist</a><a href="cart.html">🛒 Cart</a></nav>
+  <div class="search-overlay" id="search-overlay"><button class="search-close" id="search-close">&times;</button><div class="search-inner"><input type="text" id="search-input" placeholder="Search products..." autocomplete="off"><div id="search-results"><p class="search-hint">Type to search products...</p></div></div></div>
+
+  <!-- Contact Hero -->
+  <section class="contact-hero">
+    <div class="container">
+      <h1 class="fade-up" style="font-size:clamp(2.5rem,6vw,4rem);">GET IN TOUCH</h1>
+      <p class="fade-up" style="color:var(--text-secondary);max-width:500px;margin:16px auto 0;font-size:1.1rem;">We'd love to hear from you! Reach out via WhatsApp for the fastest response.</p>
+    </div>
+  </section>
+
+  <!-- Contact Methods -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-methods">
+        <div class="contact-card fade-up">
+          <div class="contact-icon">💬</div>
+          <h3>WHATSAPP</h3>
+          <p>Chat with us instantly. We reply within minutes!</p>
+          <a href="https://wa.me/919355446497?text=Hi%20Vibora!%20I%20have%20a%20question" target="_blank" class="btn btn-whatsapp">Chat on WhatsApp</a>
+        </div>
+        <div class="contact-card fade-up">
+          <div class="contact-icon">📸</div>
+          <h3>INSTAGRAM</h3>
+          <p>Follow us for latest designs, offers, and behind-the-scenes</p>
+          <a href="https://instagram.com/viboraonline.in" target="_blank" class="btn btn-outline-accent">@viboraonline.in</a>
+        </div>
+        <div class="contact-card fade-up">
+          <div class="contact-icon">📧</div>
+          <h3>EMAIL</h3>
+          <p>For formal queries, bulk order documents, or partnerships</p>
+          <a href="mailto:hello@vibora.in" class="btn btn-secondary">hello@vibora.in</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Hours -->
+  <section class="section" style="background:var(--bg-secondary);">
+    <div class="container text-center">
+      <h2 class="section-title fade-up">BUSINESS HOURS</h2>
+      <div class="fade-up" style="max-width:400px;margin:0 auto;">
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);">
+          <span style="color:var(--text-secondary);">Monday – Saturday</span>
+          <span style="font-weight:600;">9:00 AM – 8:00 PM IST</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);">
+          <span style="color:var(--text-secondary);">Sunday</span>
+          <span style="font-weight:600;">10:00 AM – 5:00 PM IST</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;">
+          <span style="color:var(--text-secondary);">WhatsApp Support</span>
+          <span style="font-weight:600;color:var(--green);">Available 24/7</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Send a Message Form -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-up">SEND US A MESSAGE</h2>
+      <p class="section-subtitle fade-up">Fill in the form and we'll get back to you</p>
+      <div class="quote-form fade-up">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="c-name" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="c-email" placeholder="you@email.com">
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" id="c-subject" placeholder="How can we help?">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="c-message" rows="4" placeholder="Your message..." style="resize:vertical;"></textarea>
+        </div>
+        <button class="btn btn-whatsapp btn-lg" style="width:100%;" onclick="sendContactMessage()">💬 Send via WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo">VIBOR<span class="logo-accent">A</span></div><p>Your Ideas of style Deserve to Exist. Premium custom merch at unbeatable prices.</p></div>
+        <div class="footer-col"><h4>SHOP</h4><a href="shop.html">All Products</a><a href="shop.html?cat=tshirts">T-Shirts</a><a href="shop.html?cat=accessories">Accessories</a></div>
+        <div class="footer-col"><h4>COMPANY</h4><a href="about.html">About Us</a><a href="corporate.html">Corporate</a><a href="contact.html">Contact</a></div>
+        <div class="footer-col"><h4>CONNECT</h4><a href="https://wa.me/919355446497" target="_blank">WhatsApp</a><a href="https://instagram.com/viboraonline.in" target="_blank">Instagram</a></div>
+      </div>
+      <div class="footer-bottom"><span>Made with ❤️ in India · © 2026 Vibora.</span><span>Your Ideas of style Deserve to Exist.</span></div>
+    </div>
+  </footer>
+  <div class="whatsapp-float"><a href="https://wa.me/919355446497?text=Hi%20Vibora!%20I%20have%20a%20question" target="_blank"><span class="wa-icon">💬</span><span class="wa-text">Chat with us!</span></a></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    function sendContactMessage() {
+      const name = document.getElementById('c-name').value.trim();
+      const email = document.getElementById('c-email').value.trim();
+      const subject = document.getElementById('c-subject').value.trim();
+      const message = document.getElementById('c-message').value.trim();
+
+      if (!name || !message) {
+        Toast.show('Please enter your name and message');
+        return;
+      }
+
+      let msg = `Hi Vibora! Message from the website:\n\n`;
+      msg += `Name: ${name}\n`;
+      if (email) msg += `Email: ${email}\n`;
+      if (subject) msg += `Subject: ${subject}\n`;
+      msg += `\nMessage: ${message}`;
+
+      window.open(getWhatsAppLink(msg), '_blank');
+    }
+  </script>
+</body>
+</html>
