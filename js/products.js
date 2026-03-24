@@ -301,7 +301,7 @@ const PRODUCTS = [
     sizes: null,
     colors: ['Custom Branding'],
     images: [
-      'https://www.adornscustomgifts.com/wp-content/uploads/2024/09/Personalized-Corporate-Diary-Combo-Adorns-16-600x600.jpg',
+      'images/custom%20gift.jpg',
       'https://www.adornscustomgifts.com/wp-content/uploads/2024/09/Personalized-Corporate-Diary-Combo-Adorns-6-455x455.jpg',
       'https://deq64r0ss2hgl.cloudfront.net/images/product/listing_grid/169045540790436.jpg'
     ],
