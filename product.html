@@ -229,6 +229,19 @@
       selectedSize = size;
       document.querySelectorAll('.size-opt').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
+      
+      // Dynamic Pricing Update
+      const params = new URLSearchParams(window.location.search);
+      const product = getProductById(params.get('id'));
+      if (product && product.sizes) {
+         // Base size is often S/M. Let's use standard offsets:
+         const offsets = { 'XS': 0, 'S': 0, 'M': 10, 'L': 20, 'XL': 30, 'XXL': 40, 'Standard': 0, 'Large': 30 };
+         const offset = offsets[size] || 0;
+         const newPrice = product.price + offset;
+         const newComp = product.competitorPrice + offset;
+         document.querySelector('.price-big').innerHTML = formatPrice(newPrice);
+         document.querySelector('.price-cut').innerHTML = formatPrice(newComp);
+      }
     }
 
     function selectColor(color, btn) {

@@ -301,15 +301,37 @@ const PRODUCTS = [
     sizes: null,
     colors: ['Custom Branding'],
     images: [
-      'https://images.unsplash.com/photo-1549465220-1a8b9238f615?w=800&h=800&fit=crop',
-      'https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=800&h=800&fit=crop',
-      'https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800&h=800&fit=crop'
+      'https://www.adornscustomgifts.com/wp-content/uploads/2024/09/Personalized-Corporate-Diary-Combo-Adorns-16-600x600.jpg',
+      'https://www.adornscustomgifts.com/wp-content/uploads/2024/09/Personalized-Corporate-Diary-Combo-Adorns-6-455x455.jpg',
+      'https://deq64r0ss2hgl.cloudfront.net/images/product/listing_grid/169045540790436.jpg'
     ],
-    description: 'Premium corporate gift box containing: 1 Custom T-shirt, 1 Mug, 1 Bottle, 1 Keychain, 1 Mouse Pad — all with your company branding.',
-    material: 'Assorted (see individual items)',
-    printType: 'Mixed: Embroidery, Sublimation, UV',
+    description: 'Premium corporate gift box containing customized premium essentials like Diaries, Pens, Tumblers, and more — all with your company branding.',
+    material: 'Assorted premium materials',
+    printType: 'Mixed: UV, Engraving',
     washCare: 'See individual item care instructions.',
-    badge: 'Best Value',
+    badge: 'Premium Box',
+    inStock: true
+  },
+  {
+    id: 'custom-acrylic-award',
+    name: 'Custom Acrylic Award / Trophy',
+    category: 'awards',
+    subcategory: 'corporate',
+    price: 499,
+    competitorPrice: 699,
+    discount: 28,
+    sizes: ['Standard', 'Large'],
+    colors: ['Clear'],
+    images: [
+      'https://images.unsplash.com/photo-1579541814924-49fef1ac1ebb?w=800&h=800&fit=crop',
+      'https://plus.unsplash.com/premium_photo-1663100237732-c1f96bbfd15c?w=800&h=800&fit=crop',
+      'https://images.unsplash.com/photo-1533227260815-48fa1bc16441?w=800&h=800&fit=crop'
+    ],
+    description: 'High-quality clear acrylic award. Fully customizable laser engraving or UV print for your corporate logos, text, and employee names. Comes with an elegant premium gift box.',
+    material: '8mm Clear Acrylic',
+    printType: 'Laser Engraved / UV Printed',
+    washCare: 'Wipe with microfiber cloth.',
+    badge: 'NEW',
     inStock: true
   }
 ];
@@ -319,7 +341,8 @@ const CATEGORIES = [
   { id: 'tshirts', name: 'T-Shirts', icon: '👕', image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=400&fit=crop' },
   { id: 'sports', name: 'Sports Tees', icon: '🏃', image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop' },
   { id: 'labcoats', name: 'Lab Coats', icon: '🥼', image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop' },
-  { id: 'accessories', name: 'Accessories', icon: '🎁', image: 'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=600&h=400&fit=crop' }
+  { id: 'accessories', name: 'Accessories', icon: '🎁', image: 'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=600&h=400&fit=crop' },
+  { id: 'awards', name: 'Custom Awards', icon: '🏆', image: 'https://images.unsplash.com/photo-1579541814924-49fef1ac1ebb?w=600&h=400&fit=crop' }
 ];
 
 // WhatsApp number
