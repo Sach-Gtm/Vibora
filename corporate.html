@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Corporate & Bulk Orders — Vibora Custom Merch</title>
   <meta name="description" content="Corporate bulk orders at Vibora. Custom branded t-shirts, mugs, bottles & gift boxes. Minimum 50 units. GST invoice available. Get a free quote!">
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main.css?v=3">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🐍</text></svg>">
   <script>
     function initTheme() {
@@ -22,10 +22,10 @@
       <a href="index.html" class="logo"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2C8 2 4 6 4 10c0 3 2 5 4 6s4 3 4 7c0-4 2-6 4-7s4-3 4-6c0-4-4-8-6-8z" fill="#E91E63" opacity="0.9"/><path d="M14 5c-3 0-5 3-5 5 0 2 1.5 3.5 3 4.5S14 17 14 20c0-3 .5-4.5 2-5.5s3-2.5 3-4.5c0-2-2-5-5-5z" fill="#FFB300" opacity="0.7"/></svg>VIBOR<span class="logo-accent">A</span></a>
       <nav class="nav-links"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="corporate.html" class="active">Corporate</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
       <div class="header-icons">
-        <button class="header-icon" id="search-btn" aria-label="Search">🔍</button>
+        <button class="header-icon" id="search-btn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" style="vertical-align:middle;"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button>
         <button class="header-icon" id="theme-toggle" aria-label="Toggle Theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" style="vertical-align: middle;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-        <a href="wishlist.html" class="header-icon" aria-label="Wishlist">♡<span class="icon-badge" id="wishlist-badge">0</span></a>
-        <a href="cart.html" class="header-icon" aria-label="Cart">🛒<span class="icon-badge" id="cart-badge">0</span></a>
+        <a href="wishlist.html" class="header-icon" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" style="vertical-align:middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="icon-badge" id="wishlist-badge">0</span></a>
+        <a href="cart.html" class="header-icon" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" style="vertical-align:middle;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="icon-badge" id="cart-badge">0</span></a>
         <button id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -35,88 +35,521 @@
   <div class="search-overlay" id="search-overlay"><button class="search-close" id="search-close">&times;</button><div class="search-inner"><input type="text" id="search-input" placeholder="Search products..." autocomplete="off"><div id="search-results"><p class="search-hint">Type to search products...</p></div></div></div>
 
   <!-- Corporate Hero -->
-  <section class="corporate-hero" style="background: radial-gradient(ellipse at 80% 50%, rgba(233,30,99,0.08) 0%, transparent 60%); padding: 80px 0;">
-    <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
-      <div style="flex: 1; min-width: 300px; max-width: 600px;">
-        <h1 class="fade-up" style="font-size: clamp(2rem, 5vw, 3.5rem);">🏢 CORPORATE & BULK ORDERS</h1>
-        <p class="fade-up" style="margin-top:16px;font-size:1.1rem; color: var(--text-secondary);">Minimum 50 units · Custom branding · GST invoice available</p>
-        <div class="trust-badges mt-4 fade-up" style="justify-content: flex-start; padding-top: 16px;">
-          <div class="trust-badge"><span>📦</span> Min 50 Units</div>
-          <div class="trust-badge"><span>🎨</span> Branding</div>
-          <div class="trust-badge"><span>📄</span> GST Invoice</div>
+  <section class="corporate-hero" style="background: radial-gradient(ellipse at 80% 50%, rgba(233,30,99,0.08) 0%, transparent 60%); padding: 40px 0 60px;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 60px; flex-wrap: wrap;">
+      
+      <!-- Smart Interface Left Side -->
+      <div style="flex: 1; min-width: 320px; max-width: 600px; z-index: 2;">
+        <div class="product-badge badge-popular fade-up" style="position:static; display:inline-block; margin-bottom:16px;">VIBORA BULK</div>
+        <h1 class="fade-up" style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; font-family: var(--font-heading);">
+          CUSTOM MERCH <br>
+          <span class="corp-typewriter" id="cycle-text">FOR OFFICES</span>
+        </h1>
+        <p class="fade-up" style="margin-top:20px; font-size:1.15rem; color: var(--text-secondary); line-height: 1.6;">
+          Automate your bulk merchandise. From corporate welcome kits to college society ID lanyards and political event tees, we deliver premium bespoke quality at scale.
+        </p>
+        
+        <div class="corp-hub-tags fade-up" style="animation-delay: 0.1s;">
+          <div class="corp-hub-tag"><span>📦</span> Min 50 Units</div>
+          <div class="corp-hub-tag"><span>🎨</span> Free Design Mockups</div>
+          <div class="corp-hub-tag"><span>⚡</span> 2-Hour Quotes</div>
+          <div class="corp-hub-tag"><span>📝</span> GST Invoices</div>
+        </div>
+
+        <div class="fade-up" style="animation-delay: 0.2s;">
+          <button class="btn btn-primary btn-lg" onclick="document.getElementById('q-name').scrollIntoView({behavior:'smooth'})" style="padding: 18px 40px; font-size: 1.1rem; border-radius: 30px;">
+            Get Your Free Quote →
+          </button>
         </div>
       </div>
-      <div class="fade-up" style="flex: 1; display: flex; justify-content: center; min-width: 300px;">
-        <img src="images/CORPORATE-GIFTING.jpg" style="border-radius: var(--radius-md); box-shadow: var(--shadow-md); max-height: 350px; object-fit: cover;" alt="Premium Corporate Diary Combo Gift Box">
+
+      <!-- 3D Isometric Right Side -->
+      <div class="fade-up" style="flex: 1; display: flex; justify-content: center; min-width: 320px; perspective: 1000px;">
+        <div class="iso-container">
+          <div class="iso-stack">
+            <div class="iso-card iso-card-1"><img src="images/sportsTees.png" alt="Corporate T-Shirt"></div>
+            <div class="iso-card iso-card-2"><img src="images/id-card.png" alt="ID Card with Lanyard"></div>
+            <div class="iso-card iso-card-3"><img src="images/corporateGifting.png" alt="Corporate Gift Box"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Custom Bulk Catalog -->
+  <section class="section bulk-catalog-section">
+    <div class="container">
+      <div class="bulk-catalog-header fade-up">
+        <h2 class="section-title" style="margin-bottom:0;">CUSTOM BULK CATALOG</h2>
+        <p class="bulk-catalog-sub">Everything you need — branded, delivered, on time.</p>
+      </div>
+      <div class="bulk-catalog-track fade-up">
+
+        <div class="bulk-card" data-color="#E91E63">
+          <div class="bulk-card-glow"></div>
+          <div class="bulk-card-inner">
+            <div class="bulk-card-icon">👕</div>
+            <div class="bulk-card-content">
+              <span class="bulk-card-tag">APPAREL</span>
+              <h3 class="bulk-card-title">CUSTOM T-SHIRTS</h3>
+              <p class="bulk-card-desc">Branded tees for events, teams & corporate wear with your logo — all sizes, all styles.</p>
+            </div>
+            <div class="bulk-card-cta">
+              <span>Get Quote</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div class="bulk-card-number">01</div>
+        </div>
+
+        <div class="bulk-card" data-color="#FFB300">
+          <div class="bulk-card-glow"></div>
+          <div class="bulk-card-inner">
+            <div class="bulk-card-icon">🪪</div>
+            <div class="bulk-card-content">
+              <span class="bulk-card-tag">IDENTITY</span>
+              <h3 class="bulk-card-title">ID CARDS & LANYARDS</h3>
+              <p class="bulk-card-desc">Premium plastic IDs with full-color print & branded sublimated lanyards for colleges & events.</p>
+            </div>
+            <div class="bulk-card-cta">
+              <span>Get Quote</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div class="bulk-card-number">02</div>
+        </div>
+
+        <div class="bulk-card" data-color="#00BCD4">
+          <div class="bulk-card-glow"></div>
+          <div class="bulk-card-inner">
+            <div class="bulk-card-icon">☕</div>
+            <div class="bulk-card-content">
+              <span class="bulk-card-tag">DRINKWARE</span>
+              <h3 class="bulk-card-title">BRANDED MUGS</h3>
+              <p class="bulk-card-desc">Custom ceramic mugs with company logo — the perfect desk gift for clients & employees.</p>
+            </div>
+            <div class="bulk-card-cta">
+              <span>Get Quote</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div class="bulk-card-number">03</div>
+        </div>
+
+        <div class="bulk-card" data-color="#4CAF50">
+          <div class="bulk-card-glow"></div>
+          <div class="bulk-card-inner">
+            <div class="bulk-card-icon">🧴</div>
+            <div class="bulk-card-content">
+              <span class="bulk-card-tag">DRINKWARE</span>
+              <h3 class="bulk-card-title">CUSTOM BOTTLES</h3>
+              <p class="bulk-card-desc">Steel sippers with UV print or laser engraving — functional branded gifts that last.</p>
+            </div>
+            <div class="bulk-card-cta">
+              <span>Get Quote</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div class="bulk-card-number">04</div>
+        </div>
+
+        <div class="bulk-card" data-color="#9C27B0">
+          <div class="bulk-card-glow"></div>
+          <div class="bulk-card-inner">
+            <div class="bulk-card-icon">🎁</div>
+            <div class="bulk-card-content">
+              <span class="bulk-card-tag">GIFTING</span>
+              <h3 class="bulk-card-title">GIFT BOXES</h3>
+              <p class="bulk-card-desc">Curated welcome kits — tee + mug + bottle + keychain + mousepad in one branded box.</p>
+            </div>
+            <div class="bulk-card-cta">
+              <span>Get Quote</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div class="bulk-card-number">05</div>
+        </div>
+
+        <div class="bulk-card" data-color="#FF6F00">
+          <div class="bulk-card-glow"></div>
+          <div class="bulk-card-inner">
+            <div class="bulk-card-icon">🏆</div>
+            <div class="bulk-card-content">
+              <span class="bulk-card-tag">RECOGNITION</span>
+              <h3 class="bulk-card-title">AWARDS & TROPHIES</h3>
+              <p class="bulk-card-desc">Premium acrylic & glass awards for employee recognition, hackathons, and annual meets.</p>
+            </div>
+            <div class="bulk-card-cta">
+              <span>Get Quote</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div class="bulk-card-number">06</div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title fade-up">WHAT WE OFFER</h2>
-      <div class="services-grid">
-        <div class="service-card fade-up">
-          <div class="service-icon">👕</div>
-          <h3>CUSTOM T-SHIRTS</h3>
-          <p>Branded tees for events, teams, and corporate wear with your logo and design</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-icon">☕</div>
-          <h3>BRANDED MUGS</h3>
-          <p>Custom ceramic mugs with company logo — perfect for clients and employees</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-icon">🧴</div>
-          <h3>CUSTOM BOTTLES</h3>
-          <p>Stainless steel sipper bottles with UV print or laser engraving</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-icon">🎁</div>
-          <h3>GIFT BOXES</h3>
-          <p>Curated corporate gift boxes with tee + mug + bottle + keychain + mousepad</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-icon">🏆</div>
-          <h3>CUSTOM AWARDS & TROPHIES</h3>
-          <p>Premium modern acrylic & glass awards for employee recognition</p>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-icon">🥼</div>
-          <h3>UNIFORMS & LAB COATS</h3>
-          <p>Embroidered uniforms, lab coats and workwear with your organization's branding</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <style>
+  /* ——— Bulk Catalog Section ——— */
+  .bulk-catalog-section { padding: 90px 0 100px; }
+  .bulk-catalog-header { text-align: center; margin-bottom: 56px; }
+  .bulk-catalog-sub {
+    color: var(--text-secondary);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 12px;
+  }
+
+  .bulk-catalog-track {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.02);
+  }
+
+  .bulk-card {
+    position: relative;
+    padding: 28px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border-right: 1px solid rgba(255,255,255,0.07);
+    overflow: hidden;
+    transition: background 0.5s ease, flex 0.5s cubic-bezier(0.25,1,0.33,1);
+    min-height: 260px;
+  }
+  .bulk-card:last-child { border-right: none; }
+
+  /* Animated glow sweep on hover */
+  .bulk-card-glow {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .bulk-card:hover .bulk-card-glow { opacity: 1; }
+
+  /* Per-card accent color glow via JS */
+  .bulk-card[data-color="#E91E63"] .bulk-card-glow { background: radial-gradient(ellipse at 50% 0%, rgba(233,30,99,0.15) 0%, transparent 70%); }
+  .bulk-card[data-color="#FFB300"] .bulk-card-glow { background: radial-gradient(ellipse at 50% 0%, rgba(255,179,0,0.15) 0%, transparent 70%); }
+  .bulk-card[data-color="#00BCD4"] .bulk-card-glow { background: radial-gradient(ellipse at 50% 0%, rgba(0,188,212,0.15) 0%, transparent 70%); }
+  .bulk-card[data-color="#4CAF50"] .bulk-card-glow { background: radial-gradient(ellipse at 50% 0%, rgba(76,175,80,0.15) 0%, transparent 70%); }
+  .bulk-card[data-color="#9C27B0"] .bulk-card-glow { background: radial-gradient(ellipse at 50% 0%, rgba(156,39,176,0.15) 0%, transparent 70%); }
+  .bulk-card[data-color="#FF6F00"] .bulk-card-glow { background: radial-gradient(ellipse at 50% 0%, rgba(255,111,0,0.15) 0%, transparent 70%); }
+
+  /* Top accent bar */
+  .bulk-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: transparent;
+    transition: background 0.4s ease;
+    z-index: 2;
+  }
+  .bulk-card[data-color="#E91E63"]:hover::before { background: linear-gradient(90deg, transparent, #E91E63, transparent); }
+  .bulk-card[data-color="#FFB300"]:hover::before { background: linear-gradient(90deg, transparent, #FFB300, transparent); }
+  .bulk-card[data-color="#00BCD4"]:hover::before { background: linear-gradient(90deg, transparent, #00BCD4, transparent); }
+  .bulk-card[data-color="#4CAF50"]:hover::before { background: linear-gradient(90deg, transparent, #4CAF50, transparent); }
+  .bulk-card[data-color="#9C27B0"]:hover::before { background: linear-gradient(90deg, transparent, #9C27B0, transparent); }
+  .bulk-card[data-color="#FF6F00"]:hover::before { background: linear-gradient(90deg, transparent, #FF6F00, transparent); }
+
+  .bulk-card-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .bulk-card-icon {
+    font-size: 1.9rem;
+    margin-bottom: 14px;
+    display: inline-block;
+    transition: transform 0.45s cubic-bezier(0.25,1,0.33,1), filter 0.45s ease;
+    filter: grayscale(0.2);
+    transform-origin: center;
+  }
+  .bulk-card:hover .bulk-card-icon {
+    transform: scale(1.2) translateY(-3px);
+    filter: grayscale(0) drop-shadow(0 4px 12px rgba(255,255,255,0.15));
+  }
+
+  .bulk-card-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 6px;
+    transition: color 0.35s ease;
+  }
+  .bulk-card[data-color="#E91E63"]:hover .bulk-card-tag { color: #E91E63; }
+  .bulk-card[data-color="#FFB300"]:hover .bulk-card-tag { color: #FFB300; }
+  .bulk-card[data-color="#00BCD4"]:hover .bulk-card-tag { color: #00BCD4; }
+  .bulk-card[data-color="#4CAF50"]:hover .bulk-card-tag { color: #4CAF50; }
+  .bulk-card[data-color="#9C27B0"]:hover .bulk-card-tag { color: #9C27B0; }
+  .bulk-card[data-color="#FF6F00"]:hover .bulk-card-tag { color: #FF6F00; }
+
+  .bulk-card-title {
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    line-height: 1.3;
+    transition: color 0.35s ease;
+  }
+
+  .bulk-card-desc {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex: 1;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease 0.05s, transform 0.4s ease 0.05s;
+  }
+  .bulk-card:hover .bulk-card-desc { opacity: 1; transform: translateY(0); }
+
+  .bulk-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s, color 0.3s ease;
+    cursor: pointer;
+  }
+  .bulk-card:hover .bulk-card-cta { opacity: 1; transform: translateY(0); }
+  .bulk-card[data-color="#E91E63"]:hover .bulk-card-cta { color: #E91E63; }
+  .bulk-card[data-color="#FFB300"]:hover .bulk-card-cta { color: #FFB300; }
+  .bulk-card[data-color="#00BCD4"]:hover .bulk-card-cta { color: #00BCD4; }
+  .bulk-card[data-color="#4CAF50"]:hover .bulk-card-cta { color: #4CAF50; }
+  .bulk-card[data-color="#9C27B0"]:hover .bulk-card-cta { color: #9C27B0; }
+  .bulk-card[data-color="#FF6F00"]:hover .bulk-card-cta { color: #FF6F00; }
+
+  .bulk-card-number {
+    position: absolute;
+    bottom: 16px;
+    right: 18px;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    line-height: 1;
+    color: rgba(255,255,255,0.03);
+    transition: color 0.4s ease, font-size 0.4s ease;
+    pointer-events: none;
+    z-index: 0;
+    user-select: none;
+  }
+  .bulk-card:hover .bulk-card-number {
+    color: rgba(255,255,255,0.055);
+    font-size: 3.8rem;
+  }
+
+  /* Responsive — collapse to 2-col on tablet, 1-col on mobile */
+  @media (max-width: 1200px) {
+    .bulk-catalog-track {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .bulk-card:nth-child(3) { border-right: none; }
+    .bulk-card:nth-child(1),
+    .bulk-card:nth-child(2),
+    .bulk-card:nth-child(3) {
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .bulk-card-desc { opacity: 1; transform: none; }
+    .bulk-card-cta { opacity: 1; transform: none; }
+  }
+  @media (max-width: 700px) {
+    .bulk-catalog-track {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .bulk-card { min-height: auto; padding: 28px 20px 24px; border-right: 1px solid rgba(255,255,255,0.07); border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .bulk-card:nth-child(even) { border-right: none; }
+    .bulk-card:nth-child(5):last-child, .bulk-card:last-child { border-bottom: none; }
+    .bulk-card:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.07); }
+  }
+  </style>
 
   <!-- How It Works -->
-  <section class="section" style="background:var(--bg-secondary);">
+  <section class="hiw-section fade-up">
     <div class="container">
-      <h2 class="section-title fade-up">HOW IT WORKS</h2>
-      <p class="section-subtitle fade-up">From design to delivery in 3 simple steps</p>
-      <div class="steps-grid" style="grid-template-columns:repeat(3,1fr);">
-        <div class="step-card fade-up">
-          <div class="step-number">1</div>
-          <h3>SHARE YOUR DESIGN</h3>
-          <p>Send us your logo, design, or idea via WhatsApp. We'll help refine it for free.</p>
+
+      <div class="hiw-header">
+        <p class="hiw-label">THE PROCESS</p>
+        <h2 class="hiw-title-big">HOW IT <span class="hiw-accent">WORKS</span></h2>
+        <p class="hiw-sub">From idea to delivery — seamless, fast, premium.</p>
+      </div>
+
+      <div class="hiw-track">
+
+        <!-- Step 1 -->
+        <div class="hiw-step">
+          <div class="hiw-step-top">
+            <div class="hiw-orb">
+              <div class="hiw-orb-ring"></div>
+              <div class="hiw-orb-ring hiw-orb-ring-2"></div>
+              <div class="hiw-orb-core"><span class="hiw-orb-icon">🎨</span></div>
+            </div>
+          </div>
+          <div class="hiw-step-body">
+            <h3 class="hiw-step-title">Share Your Design</h3>
+            <p class="hiw-step-desc">Send us your logo, idea, or reference via WhatsApp. Our team refines it into a print-ready mockup — free of charge.</p>
+            <div class="hiw-step-tag">Free Design Support</div>
+          </div>
         </div>
-        <div class="step-card fade-up">
-          <div class="step-number">2</div>
-          <h3>GET A QUOTE IN 2 HRS</h3>
-          <p>We'll send you a detailed quote with pricing, timelines, and mockups.</p>
+
+        <!-- Connector 1 -->
+        <div class="hiw-connector">
+          <svg viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0 12 Q30 2 60 12 Q90 22 120 12" stroke="url(#hiw-grad1)" stroke-width="1.5" fill="none" stroke-dasharray="4 4" class="hiw-path"/>
+            <defs>
+              <linearGradient id="hiw-grad1" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#E91E63" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#FFB300" stop-opacity="0.6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="hiw-arrow">→</div>
         </div>
-        <div class="step-card fade-up">
-          <div class="step-number">3</div>
-          <h3>WE DELIVER PAN-INDIA</h3>
-          <p>Once confirmed, we produce and ship directly to your office or venue.</p>
+
+        <!-- Step 2 -->
+        <div class="hiw-step">
+          <div class="hiw-step-top">
+            <div class="hiw-orb hiw-orb-gold">
+              <div class="hiw-orb-ring"></div>
+              <div class="hiw-orb-ring hiw-orb-ring-2"></div>
+              <div class="hiw-orb-core"><span class="hiw-orb-icon">⚡</span></div>
+            </div>
+          </div>
+          <div class="hiw-step-body">
+            <h3 class="hiw-step-title">Get a Quote in 2 Hrs</h3>
+            <p class="hiw-step-desc">We send a detailed quote within 2 hours — pricing, timelines, fabric options, and a full digital mockup to approve.</p>
+            <div class="hiw-step-tag hiw-tag-gold">2-Hour Turnaround</div>
+          </div>
         </div>
+
+        <!-- Connector 2 -->
+        <div class="hiw-connector">
+          <svg viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0 12 Q30 22 60 12 Q90 2 120 12" stroke="url(#hiw-grad2)" stroke-width="1.5" fill="none" stroke-dasharray="4 4" class="hiw-path"/>
+            <defs>
+              <linearGradient id="hiw-grad2" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#FFB300" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#25D366" stop-opacity="0.6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="hiw-arrow">→</div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="hiw-step">
+          <div class="hiw-step-top">
+            <div class="hiw-orb hiw-orb-green">
+              <div class="hiw-orb-ring"></div>
+              <div class="hiw-orb-ring hiw-orb-ring-2"></div>
+              <div class="hiw-orb-core"><span class="hiw-orb-icon">🚀</span></div>
+            </div>
+          </div>
+          <div class="hiw-step-body">
+            <h3 class="hiw-step-title">We Deliver Pan-India</h3>
+            <p class="hiw-step-desc">Once approved, production begins immediately. Your order ships directly to your office or event venue across India.</p>
+            <div class="hiw-step-tag hiw-tag-green">PAN-India Delivery</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
+  <style>
+  .hiw-section { padding: 80px 0 90px; background: var(--bg-primary); position: relative; }
+  .hiw-header { text-align: center; margin-bottom: 60px; }
+  .hiw-label { font-family:'Montserrat',sans-serif; font-size:0.62rem; letter-spacing:5px; font-weight:700; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+  .hiw-title-big { font-family:var(--font-heading); font-size:clamp(2.2rem,4vw,3.2rem); letter-spacing:3px; line-height:1; margin-bottom:12px; }
+  .hiw-accent { background:linear-gradient(135deg,var(--accent),var(--gold)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .hiw-sub { font-family:'Montserrat',sans-serif; font-size:0.78rem; letter-spacing:2px; color:var(--text-secondary); text-transform:uppercase; }
+
+  .hiw-track { display:flex; align-items:flex-start; }
+  .hiw-step { flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px; transition:transform 0.4s ease; cursor:default; }
+  .hiw-step:hover { transform:translateY(-6px); }
+
+  .hiw-step-top { position:relative; }
+  .hiw-orb { position:relative; width:100px; height:100px; display:flex; align-items:center; justify-content:center; }
+  .hiw-orb-ring { position:absolute; inset:0; border-radius:50%; border:1.5px solid rgba(233,30,99,0.3); animation:orbPulse 3s ease-in-out infinite; }
+  .hiw-orb-ring-2 { inset:-12px; border-color:rgba(233,30,99,0.1); animation-delay:1.5s; }
+  .hiw-orb-gold .hiw-orb-ring { border-color:rgba(255,179,0,0.4); }
+  .hiw-orb-gold .hiw-orb-ring-2 { border-color:rgba(255,179,0,0.1); }
+  .hiw-orb-green .hiw-orb-ring { border-color:rgba(37,211,102,0.4); }
+  .hiw-orb-green .hiw-orb-ring-2 { border-color:rgba(37,211,102,0.1); }
+  @keyframes orbPulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.07);opacity:0.6} }
+
+  .hiw-orb-core { width:72px; height:72px; border-radius:50%; background:rgba(255,255,255,0.03); border:1px solid rgba(233,30,99,0.25); backdrop-filter:blur(10px); display:flex; align-items:center; justify-content:center; position:relative; z-index:2; box-shadow:0 0 0 6px rgba(233,30,99,0.04),0 8px 24px rgba(0,0,0,0.4); transition:transform 0.4s ease,box-shadow 0.4s ease,border-color 0.4s ease; }
+  .hiw-orb-gold .hiw-orb-core { border-color:rgba(255,179,0,0.3); box-shadow:0 0 0 6px rgba(255,179,0,0.04),0 8px 24px rgba(0,0,0,0.4); }
+  .hiw-orb-green .hiw-orb-core { border-color:rgba(37,211,102,0.3); box-shadow:0 0 0 6px rgba(37,211,102,0.04),0 8px 24px rgba(0,0,0,0.4); }
+  .hiw-step:hover .hiw-orb-core { transform:scale(1.07); box-shadow:0 0 0 14px rgba(233,30,99,0.06),0 10px 30px rgba(233,30,99,0.18); border-color:rgba(233,30,99,0.5); }
+  .hiw-step:has(.hiw-orb-gold):hover .hiw-orb-core { box-shadow:0 0 0 14px rgba(255,179,0,0.06),0 10px 30px rgba(255,179,0,0.18); border-color:rgba(255,179,0,0.6); }
+  .hiw-step:has(.hiw-orb-green):hover .hiw-orb-core { box-shadow:0 0 0 14px rgba(37,211,102,0.06),0 10px 30px rgba(37,211,102,0.18); border-color:rgba(37,211,102,0.6); }
+  .hiw-orb-icon { font-size:1.7rem; display:block; transition:transform 0.4s ease; }
+  .hiw-step:hover .hiw-orb-icon { transform:scale(1.12) rotate(-5deg); }
+
+  .hiw-step-body { display:flex; flex-direction:column; align-items:center; gap:8px; padding:0 12px; }
+  .hiw-step-title { font-family:'Outfit','Inter',sans-serif; font-size:0.9rem; font-weight:600; letter-spacing:1.2px; text-transform:uppercase; color:var(--text-primary); margin:0; }
+  .hiw-step-desc { font-size:0.8rem; color:var(--text-secondary); line-height:1.65; max-width:210px; margin:0 auto; }
+  .hiw-step-tag { display:inline-flex; align-items:center; padding:4px 12px; border-radius:20px; font-family:'Montserrat',sans-serif; font-size:0.58rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; background:rgba(233,30,99,0.09); border:1px solid rgba(233,30,99,0.18); color:#E91E63; margin-top:2px; transition:background 0.3s,box-shadow 0.3s; }
+  .hiw-step:hover .hiw-step-tag { background:rgba(233,30,99,0.14); box-shadow:0 0 12px rgba(233,30,99,0.12); }
+  .hiw-tag-gold { background:rgba(255,179,0,0.09); border-color:rgba(255,179,0,0.18); color:#FFB300; }
+  .hiw-step:hover .hiw-tag-gold { background:rgba(255,179,0,0.14); box-shadow:0 0 12px rgba(255,179,0,0.12); }
+  .hiw-tag-green { background:rgba(37,211,102,0.09); border-color:rgba(37,211,102,0.18); color:#25D366; }
+  .hiw-step:hover .hiw-tag-green { background:rgba(37,211,102,0.14); box-shadow:0 0 12px rgba(37,211,102,0.12); }
+
+  .hiw-connector { flex:0 0 100px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding-top:46px; gap:4px; }
+  .hiw-connector svg { width:100%; height:22px; }
+  .hiw-path { stroke-dasharray:4 4; animation:hiwDash 1.8s linear infinite; }
+  @keyframes hiwDash { to { stroke-dashoffset:-16; } }
+  .hiw-arrow { font-size:0.85rem; color:var(--text-muted); animation:hiwArrow 2s ease-in-out infinite; }
+  @keyframes hiwArrow { 0%,100%{transform:translateX(0);opacity:0.4} 50%{transform:translateX(4px);opacity:0.9} }
+
+  @media (max-width:860px) {
+    .hiw-track { flex-direction:column; align-items:center; gap:0; }
+    .hiw-connector { flex:0 0 auto; flex-direction:row; padding:8px 0; transform:rotate(90deg); }
+    .hiw-step { gap:16px; }
+  }
+  </style>
+
+
+
+
+
+
+
   <!-- Quote Form -->
+
+
   <section class="section">
     <div class="container">
       <h2 class="section-title fade-up">GET A FREE QUOTE</h2>
@@ -168,19 +601,191 @@
   </section>
 
   <!-- Trusted By -->
-  <section class="section" style="background:var(--bg-secondary);">
+  <section class="tb-section fade-up">
     <div class="container">
-      <h2 class="section-title fade-up">TRUSTED BY</h2>
-      <div class="trusted-logos fade-up">
-        <div class="trusted-logo">TechCorp</div>
-        <div class="trusted-logo">StartupXYZ</div>
-        <div class="trusted-logo">MediHealth</div>
-        <div class="trusted-logo">EduPro</div>
-        <div class="trusted-logo">FashionCo</div>
-        <div class="trusted-logo">EventsPlus</div>
+
+      <!-- Stats row -->
+      <div class="tb-stats">
+        <div class="tb-stat">
+          <span class="tb-stat-num">1000<span class="tb-stat-plus">+</span></span>
+          <span class="tb-stat-label">Happy Clients</span>
+        </div>
+        <div class="tb-stat-divider"></div>
+        <div class="tb-stat">
+          <span class="tb-stat-num">50<span class="tb-stat-plus">+</span></span>
+          <span class="tb-stat-label">Cities Served</span>
+        </div>
+        <div class="tb-stat-divider"></div>
+        <div class="tb-stat">
+          <span class="tb-stat-num">10k<span class="tb-stat-plus">+</span></span>
+          <span class="tb-stat-label">Units Delivered</span>
+        </div>
+        <div class="tb-stat-divider"></div>
+        <div class="tb-stat">
+          <span class="tb-stat-num">4.6<span class="tb-stat-plus">★</span></span>
+          <span class="tb-stat-label">Avg. Rating</span>
+        </div>
       </div>
+
+      <p class="tb-label">TRUSTED BY BRANDS ACROSS INDIA</p>
+
+      <!-- Marquee -->
+      <div class="tb-ticker-wrap">
+        <div class="tb-ticker">
+          <!-- Set 1 -->
+          <div class="tb-chip"><span class="tb-init" style="background:#E91E63;">T</span>TechCorp</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#FFB300;">S</span>StartupXYZ</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#00BCD4;">M</span>MediHealth</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#4CAF50;">E</span>EduPro</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#9C27B0;">F</span>FashionCo</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#FF6F00;">E</span>EventsPlus</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#E91E63;">B</span>BrandElite</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#2196F3;">N</span>NextGen Labs</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#009688;">Z</span>ZenithCo</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#FF5722;">R</span>RallyIndia</div>
+          <!-- Set 2 (duplicate for seamless loop) -->
+          <div class="tb-chip"><span class="tb-init" style="background:#E91E63;">T</span>TechCorp</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#FFB300;">S</span>StartupXYZ</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#00BCD4;">M</span>MediHealth</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#4CAF50;">E</span>EduPro</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#9C27B0;">F</span>FashionCo</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#FF6F00;">E</span>EventsPlus</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#E91E63;">B</span>BrandElite</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#2196F3;">N</span>NextGen Labs</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#009688;">Z</span>ZenithCo</div>
+          <div class="tb-chip"><span class="tb-init" style="background:#FF5722;">R</span>RallyIndia</div>
+        </div>
+      </div>
+
     </div>
   </section>
+
+  <style>
+  /* ——— Trusted By ——— */
+  .tb-section { padding: 70px 0 80px; background: var(--bg-secondary); }
+
+  /* Stats */
+  .tb-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+  .tb-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 0 40px;
+  }
+  .tb-stat-num {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--text-primary), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+  }
+  .tb-stat-plus {
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, var(--accent), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tb-stat-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+  .tb-stat-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--border);
+  }
+
+  /* Label */
+  .tb-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  /* Marquee */
+  .tb-ticker-wrap {
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+  }
+  .tb-ticker {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    animation: tbScroll 28s linear infinite;
+  }
+  .tb-ticker:hover { animation-play-state: paused; }
+  @keyframes tbScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Chips */
+  .tb-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px 10px 10px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+    transition: border-color 0.3s ease, background 0.3s ease;
+    cursor: default;
+  }
+  .tb-chip:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(255,255,255,0.15);
+    color: var(--text-primary);
+  }
+  .tb-init {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    color: white;
+    flex-shrink: 0;
+    letter-spacing: 0;
+  }
+
+  @media (max-width: 600px) {
+    .tb-stat { padding: 0 20px; }
+    .tb-stat-num { font-size: 2rem; }
+    .tb-stat-divider { height: 30px; }
+  }
+  </style>
+
+
 
   <!-- FAQ -->
   <section class="section">
@@ -214,24 +819,122 @@
       </div>
     </div>
   </section>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand"><div class="logo">VIBOR<span class="logo-accent">A</span></div><p>Your Ideas of style Deserve to Exist. Premium custom merch at unbeatable prices.</p></div>
-        <div class="footer-col"><h4>SHOP</h4><a href="shop.html">All Products</a><a href="shop.html?cat=tshirts">T-Shirts</a><a href="shop.html?cat=accessories">Accessories</a></div>
-        <div class="footer-col"><h4>COMPANY</h4><a href="about.html">About Us</a><a href="corporate.html">Corporate</a><a href="contact.html">Contact</a></div>
-        <div class="footer-col"><h4>CONNECT</h4><a href="https://wa.me/919818549572" target="_blank">WhatsApp</a><a href="https://instagram.com/viboraonline.in" target="_blank">Instagram</a></div>
+  <!-- Mega Footer -->
+  <footer class="mega-footer">
+    <div class="footer-island-wrapper">
+      <div class="footer-island fade-up">
+        <div class="island-brand">
+          <div class="logo">VIBOR<span class="logo-accent">A</span></div>
+          <p>India's boldest custom merch brand. Premium quality at unbeatable prices.</p>
+        </div>
+        <div class="island-links">
+          <div class="link-group">
+            <span class="group-title">SHOP</span>
+            <a href="shop.html">All Products</a>
+            <a href="corporate.html">Corporate Orders</a>
+          </div>
+          <div class="link-group">
+            <span class="group-title">COMPANY</span>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+          <div class="link-group">
+            <span class="group-title">CONNECT</span>
+            <a href="https://wa.me/919818549572" target="_blank">WhatsApp</a>
+            <a href="https://instagram.com/viboraonline.in" target="_blank">Instagram</a>
+          </div>
+        </div>
       </div>
-      <div class="footer-bottom"><span>Made with ❤️ in India · © 2026 Vibora.</span><span>Your Ideas of style Deserve to Exist.</span></div>
+    </div>
+    <div class="mega-text-container">
+      <svg class="mega-svg-text">
+        <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" class="mega-text">
+          VIBOR<tspan class="mega-accent">A</tspan>.
+        </text>
+      </svg>
+    </div>
+    <div class="footer-sub-bar">
+      <span>Made with ❤️ in India · © 2026 Vibora. All rights reserved.</span>
     </div>
   </footer>
-  <div class="whatsapp-float"><a href="https://wa.me/919818549572?text=Hi%20Vibora!%20I%20need%20a%20corporate%20bulk%20order%20quote." target="_blank"><span class="wa-icon">💬</span><span class="wa-text">Chat with us!</span></a></div>
 
-  <script src="js/products.js"></script>
+  <!-- WhatsApp Float -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/919818549572?text=Hi%20Vibora!%20I%20have%20a%20question" target="_blank" aria-label="WhatsApp Chat">
+      <span class="wa-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+        </svg>
+      </span>
+      <span class="wa-text">Chat with us</span>
+    </a>
+  </div>
+<script src="js/products.js"></script>
   <script src="js/store.js"></script>
   <script src="js/app.js"></script>
   <script>
+    // Auto Typer Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const phrases = ['FOR OFFICES', 'FOR COLLEGE SOCIETIES', 'FOR CREATORS', 'FOR POLITICAL RALLIES', 'FOR DIWALI GIFTING'];
+      let idx = 0;
+      let charIdx = 0;
+      let isDeleting = false;
+      const el = document.getElementById('cycle-text');
+      
+      if(el) {
+        function typeEffect() {
+          const currentPhrase = phrases[idx];
+          if (isDeleting) {
+            el.textContent = currentPhrase.substring(0, charIdx - 1);
+            charIdx--;
+          } else {
+            el.textContent = currentPhrase.substring(0, charIdx + 1);
+            charIdx++;
+          }
+          
+          let speed = isDeleting ? 40 : 100;
+          
+          if (!isDeleting && charIdx === currentPhrase.length) {
+            speed = 2000;
+            isDeleting = true;
+          } else if (isDeleting && charIdx === 0) {
+            isDeleting = false;
+            idx = (idx + 1) % phrases.length;
+            speed = 500;
+          }
+          
+          setTimeout(typeEffect, speed);
+        }
+        setTimeout(typeEffect, 1000);
+      }
+
+      // Bulk catalog card click — scroll to quote form
+      const productMap = {
+        'CUSTOM T-SHIRTS': 'Custom T-Shirts',
+        'ID CARDS & LANYARDS': 'Mixed / Multiple Products',
+        'BRANDED MUGS': 'Custom Mugs',
+        'CUSTOM BOTTLES': 'Custom Bottles',
+        'GIFT BOXES': 'Corporate Gift Boxes',
+        'AWARDS & TROPHIES': 'Mixed / Multiple Products'
+      };
+      document.querySelectorAll('.bulk-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const titleEl = card.querySelector('.bulk-card-title');
+          if (titleEl) {
+            const productSelect = document.getElementById('q-product');
+            const match = productMap[titleEl.textContent.trim()];
+            if (productSelect && match) {
+              for (let opt of productSelect.options) {
+                if (opt.text === match) { productSelect.value = opt.value; break; }
+              }
+            }
+          }
+          document.getElementById('q-name').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      });
+    });
+
     function toggleFAQ(btn) {
       const item = btn.closest('.faq-item');
       const wasOpen = item.classList.contains('open');
